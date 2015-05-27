@@ -1,0 +1,73 @@
+WEPS NAMELIST FILE
+-----------------------------+------------------------------------------------------
+%%% TIME MENU %%%            :
+# OF DOMAINS                 : 1
+START_YEAR                   : 2014       2012       2012
+START_MONTH                  : 05         09         09
+START_DAY                    : 19         15         15
+START_HOUR                   : 01         01         01
+END_YEAR                     : 2014       2012       2012
+END_MONTH                    : 05         09         09
+END_DAY                      : 21         29         29
+END_HOUR                     : 24         24         24
+-----------------------------+------------------------------------------------------
+%%% DOMAIN MENU %%%          :
+PROJ_CODE                    : PROJ_LC
+DOMAIN ORDER                 : 1          2          3
+DX (m)                       : 36000.0    27000.0    9000.0
+DY (m)                       : 36000.0    27000.0    9000.0
+E_WE                         : 35         148        145
+E_SN                         : 25         130        169
+E_VERT                       : 19
+CORNER_LAT                   :  37.07459  -10.55554  -5.442787
+CORNER_LON                   :  -106.6876  94.64838  108.1266
+STAND_LON                    : -100  
+TRUELAT1                     : 41 
+TRUELAT2                     : 41
+-----------------------------+------------------------------------------------------
+%%% EMISSION MENU %%%        :
+TURN ON NEI                  : T          F          F
+  - TURN ON NEI POINT DAILY  : F          F          F
+  - TURN ON NEI POINT HOURLY : T          F          F
+  - TURN ON NEI AREA DAILY   : F          F          F
+  - TURN ON NEI AREA HOURLY  : T          F          F
+TURN ON INTEX                : F          F          F
+TURN ON FLAMBE               : T          T          T
+TURN ON FINN                 : F          F          F
+TURN ON GBBEP                : F          F          F
+TURN ON GFED                 : F          F          F
+TURN ON SEVIRI               : F          F          F
+-----------------------------+------------------------------------------------------
+%%% INJECTION HEIGHT MENU %%%:
+INJ_HEIGHT (m)               : 800.0
+-----------------------------+------------------------------------------------------
+%%% SMOKE SPECIES MENU %%%   :
+N_SPECIES                    : 2
+SPECIES                      : OC    BC
+% OF SPECIES                 : 90.0  10.0
+-----------------------------+------------------------------------------------------
+%%% DIRECTORY MENU %%%       :
+NEIDIR                       : ../data/bg/NEI/
+INTEXDIR                     : ../data/bg/INTEX/
+FLAMBEDIR                    : ../data/smoke/FLAMBE/
+FINNDIR                      : ../data/smoke/FINN/
+GBBEPDIR                     : ../data/smoke/GBBEP/
+GFEDDIR                      : ../data/smoke/GFED/
+SEVIRIDIR                    : ../data/smoke/SEVIRI/
+OUTPUTDIR                    : ../results/
+-----------------------------+------------------------------------------------------
+%%% DIAGNOSTIC MENU %%%      :
+TURN ON DIAGNOSTIC?          : T
+-----------------------------+------------------------------------------------------
+%%% DEBUG MENU %%%           :
+TURN ON SCREEN PRINT         : T
+TURN ON NEI DEBUG            : T
+TURN ON INTEX DEBUG          : T
+TURN ON FLAMBE DEBUG         : T
+TURN ON FINN DEBUG           : T
+TURN ON GBBEP DEBUG          : T
+TURN ON GFED DEBUG           : T
+TURN ON SEVIRI DEBUG         : T
+-----------------------------+------------------------------------------------------
+END OF FILE                  :
+-----------------------------+------------------------------------------------------

@@ -1,0 +1,19 @@
+#!/bin/sh
+#SBATCH --job-name=real_2
+#SBATCH --ntasks=4              # 16 cores
+#SBATCH --mem-per-cpu=5G       # Minimum memory required per CPU (in megabytes)
+#SBATCH --time=1:00:00          # Run time in hh:mm:ss
+#SBATCH --error=real_2.err
+#SBATCH --output=real_2.out
+#SBATCH --qos=jwang7
+
+module load WRF/WRF
+rm rsl.*
+
+###########
+#sed -i "12s/.*/ end_year                            = `date --date='72 hour' +%Y`,   2012,  2012,/" namelist.input       ###CHANGE HERE###
+#sed -i "13s/.*/ end_month                           = `date --date='72 hour' +%m`,  07,  07,/" namelist.input            ###CHANGE HERE###
+#sed -i "14s/.*/ end_day                             = `date --date='72 hour' +%d`,    27,   27,/" namelist.input         ###CHANGE HERE###
+###########
+
+mpirun real.exe &> real_2.log

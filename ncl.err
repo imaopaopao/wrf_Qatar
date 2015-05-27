@@ -1,0 +1,8 @@
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/dewpoint': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/temp': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/upper_air': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/precip': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/reflectivity': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/pm25': File exists
+mkdir: cannot create directory `/work/swanson/jingchao/wrf/data/images/15052706/images/o3': File exists

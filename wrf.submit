@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH --job-name=WRF_CHEM
+##SBATCH --nodes=1
+#SBATCH --ntasks=12     
+#SBATCH --mem-per-cpu=10G 
+#SBATCH --time=24:00:00   
+#SBATCH --error=wrf.err
+#SBATCH --output=wrf.out
+#SBATCH --qos=jwang7
+
+module load WRF/WRF
+rm -f /work/swanson/jingchao/wrf/WRF_forecast/WRF_chem/test/em_real/wrfout/*
+mpirun wrf.exe &> wrf.log

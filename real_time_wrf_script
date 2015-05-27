@@ -1,0 +1,55 @@
+#!/bin/bash
+# Clint Aegerter
+# Uses plot_real_time_wrf NCL scripts to plot .png images.
+# Syntax: ncl plot_real_time_wrf_*.ncl dir=\"directory\" filelist =\"filelist"\
+
+date +"%T"
+
+# Set run time of model
+run="14021500"
+directory='/work/jwang7/caegerter/test/'$run'/wrfout/'
+
+# Create list of WRF output files
+ls $directory'wrfout'* | xargs -n1 basename > $directory$run'_list'
+flist='"'$run'_list"'
+
+# Create directories for images
+mkdir $directory'images'
+mkdir $directory'images/dewpoint'
+mkdir $directory'images/temp'
+mkdir $directory'images/upper_air'
+mkdir $directory'images/precip'
+mkdir $directory'images/reflectivity'
+mkdir $directory'images/pm25'
+mkdir $directory'images/o3'
+
+# Modify directory so it is passed correctly to NCL scripts
+directory='"'$directory'"'
+
+# Run NCL scripts
+echo "Working on 2m temperature plots ==============================="
+ncl plot_real_time_wrf_2mtemp.ncl dir=$directory filelist=$flist
+
+echo "Working on 2m dewpoint plots =================================="
+ncl plot_real_time_wrf_2mdewpoint.ncl dir=$directory filelist=$flist
+
+echo "Working on 1hr precipitation plots ============================"
+ncl plot_real_time_wrf_1hrprecip.ncl dir=$directory filelist=$flist
+
+echo "Working on total precipitation plots =========================="
+ncl plot_real_time_wrf_totalprecip.ncl dir=$directory filelist=$flist
+
+echo "Working on reflectivity plots ================================="
+ncl plot_real_time_wrf_reflectivity.ncl dir=$directory filelist=$flist
+
+echo "Working on upper air plots ===================================="
+ncl plot_real_time_wrf_upperair.ncl dir=$directory filelist=$flist
+
+echo "Working on PM2.5 plots ========================================"
+ncl plot_real_time_wrf_pm25.ncl dir=$directory filelist=$flist
+
+echo "Working on O3 plots ==========================================="
+ncl plot_real_time_wrf_o3.ncl dir=$directory filelist=$flist
+
+
+date +"%T"

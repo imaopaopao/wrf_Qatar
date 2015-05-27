@@ -1,0 +1,1 @@
+cp ../wrfout2/wrfout_d01_$year1-$month1-$day1"_12:00:00"  ../wrf_chem_input_d01
